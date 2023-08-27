@@ -7,5 +7,17 @@
     </content>
     <orderEntry type="jdk" jdkName="1.8" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="javax.annotation" level="project" />
+    <orderEntry type="library" name="javax.ejb" level="project" />
+    <orderEntry type="library" name="javax.jms" level="project" />
+    <orderEntry type="library" name="javax.persistence" level="project" />
+    <orderEntry type="library" name="javax.resource" level="project" />
+    <orderEntry type="library" name="javax.servlet" level="project" />
+    <orderEntry type="library" name="javax.servlet.jsp" level="project" />
+    <orderEntry type="library" name="javax.servlet.jsp.jstl" level="project" />
+    <orderEntry type="library" name="javax.transaction" level="project" />
+    <orderEntry type="library" name="mysql-connector-j-8.1.0" level="project" />
+    <orderEntry type="library" name="javax.json-1.1.4" level="project" />
+    <orderEntry type="library" name="javax.json-api-1.1.4" level="project" />
   </component>
 </module>
