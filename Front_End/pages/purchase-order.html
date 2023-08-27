@@ -59,8 +59,6 @@
                     <div class="form-group">
                       <label>Customer :</label>
                       <select class="form-control" id="selectCusID">
-                        <option value="1">A</option>
-                        <option value="2">B</option>
                       </select>
                       <span class="control-error"
                             id="cus-empty-error"></span>
@@ -230,6 +228,119 @@
 
 
 <script src="../assets/js/jquery-3.7.0.min.js"></script>
+
+<script>
+  getItemCodes();
+  getCusIds();
+
+  function getItemCodes() {
+    $("#selectItemCode").empty();
+
+    $.ajax({
+      url: 'http://localhost:8080/backEnd/pages/purchase-order',
+      dataType: "json",
+      success: function (codeObject) {
+        for (let i in codeObject) {
+          let item = codeObject[i];
+          let code = item.code;
+
+            if (code == undefined){
+              continue;
+            }else {
+              let option = "<option>"+code+"</option>";
+              $("#selectItemCode").append(option);
+            }
+        }
+      },
+      error: function (error) {
+        console.log(error)
+      }
+    });
+  }
+
+  function getCusIds() {
+    $("#selectCusID").empty();
+
+    $.ajax({
+      url: 'http://localhost:8080/backEnd/pages/purchase-order',
+      dataType: "json",
+      success: function (cusObject) {
+        for (let i in cusObject) {
+          let cus = cusObject[i];
+          let cusId = cus.id;
+
+          let check = undefined;
+
+          if (cusId == check){
+            continue;
+          }else {
+            let option = "<option>"+cusId+"</option>";
+            $("#selectCusID").append(option);
+          }
+        }
+      },
+      error: function (error) {
+        console.log(error)
+      }
+    });
+  }
+
+  $("#selectCusID").click(function () {
+    let val = $("#selectCusID").val();
+
+    $.ajax({
+      url: 'http://localhost:8080/backEnd/pages/purchase-order',
+      contentType: "application/json",
+      method: "put",
+      dataType: "json",
+      data: JSON.stringify({
+        "id" : val
+      }),
+      success: function (customer) {
+        let id = customer.id;
+        let name = customer.name;
+        let address = customer.address;
+        let salary = customer.salary;
+
+        $("#orderCustomerID").val(id);
+        $("#orderCustomerName").val(name);
+        $("#orderCustomerAddress").val(address);
+        $("#orderCustomerSalary").val(salary);
+      },
+      error: function (error) {
+        console.log(error);
+      }
+    });
+  });
+
+  $("#selectItemCode").click(function () {
+    let val = $("#selectItemCode").val();
+
+    $.ajax({
+      url: 'http://localhost:8080/backEnd/pages/purchase-order',
+      contentType: "application/json",
+      method: "delete",
+      dataType: "json",
+      data: JSON.stringify({
+        "code" : val
+      }),
+      success: function (item) {
+        let code = item.code;
+        let name = item.name;
+        let qty = item.qty;
+        let price = item.price;
+
+        $("#txtItemCode").val(code);
+        $("#txtItemDescription").val(name);
+        $("#txtQTYOnHand").val(qty);
+        $("#txtItemPrice").val(price);
+      },
+      error: function (error) {
+        console.log(error);
+      }
+    });
+  });
+</script>
 
 </body>
 </html>
