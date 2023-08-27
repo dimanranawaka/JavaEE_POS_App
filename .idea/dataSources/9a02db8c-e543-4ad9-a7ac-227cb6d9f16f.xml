@@ -1005,8 +1005,8 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
     </schema>
     <schema id="291" parent="1" name="posapp">
       <Current>1</Current>
-      <IntrospectionTimestamp>2023-08-27.20:42:29</IntrospectionTimestamp>
-      <LocalIntrospectionTimestamp>2023-08-27.09:42:29</LocalIntrospectionTimestamp>
+      <IntrospectionTimestamp>2023-08-27.23:18:36</IntrospectionTimestamp>
+      <LocalIntrospectionTimestamp>2023-08-27.12:18:36</LocalIntrospectionTimestamp>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
     <schema id="292" parent="1" name="sys">
@@ -1035,19 +1035,39 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
-    <column id="298" parent="297" name="id">
+    <table id="298" parent="291" name="item">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </table>
+    <column id="299" parent="297" name="id">
       <DasType>varchar(50)|0s</DasType>
       <Position>1</Position>
     </column>
-    <column id="299" parent="297" name="name">
+    <column id="300" parent="297" name="name">
       <DasType>varchar(80)|0s</DasType>
       <Position>2</Position>
     </column>
-    <column id="300" parent="297" name="address">
+    <column id="301" parent="297" name="address">
       <DasType>varchar(80)|0s</DasType>
       <Position>3</Position>
     </column>
-    <column id="301" parent="297" name="salary">
+    <column id="302" parent="297" name="salary">
+      <DasType>double|0s</DasType>
+      <Position>4</Position>
+    </column>
+    <column id="303" parent="298" name="code">
+      <DasType>varchar(45)|0s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="304" parent="298" name="name">
+      <DasType>varchar(80)|0s</DasType>
+      <Position>2</Position>
+    </column>
+    <column id="305" parent="298" name="qty">
+      <DasType>int|0s</DasType>
+      <Position>3</Position>
+    </column>
+    <column id="306" parent="298" name="price">
       <DasType>double|0s</DasType>
       <Position>4</Position>
     </column>
