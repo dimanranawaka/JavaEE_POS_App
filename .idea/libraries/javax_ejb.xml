@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="javax.ejb">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Back_End/src/lk/ijse/pos_app/lib/javax.ejb.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
