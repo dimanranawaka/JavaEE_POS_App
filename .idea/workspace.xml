@@ -9,12 +9,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1e752750-833b-4bf6-87c5-709fdb29838f" name="Changes" comment="Implement - ItemDTO and CustomerDTO">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Back_End/src/lk/ijse/pos_app/servlets/CustomerServlet.java" afterDir="false" />
+    <list default="true" id="1e752750-833b-4bf6-87c5-709fdb29838f" name="Changes" comment="Implement - CustomerServlet">
+      <change afterPath="$PROJECT_DIR$/Back_End/src/lk/ijse/pos_app/servlets/ItemServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Front_End/pages/customer.html" beforeDir="false" afterPath="$PROJECT_DIR$/Front_End/pages/customer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Back_End/src/lk/ijse/pos_app/servlets/CustomerServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/Back_End/src/lk/ijse/pos_app/servlets/CustomerServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Back_End/Back_End.war" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Back_End/Back_End.war" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -184,7 +183,7 @@
       <workItem from="1693118353067" duration="1836000" />
       <workItem from="1693122978227" duration="91000" />
       <workItem from="1693123087656" duration="388000" />
-      <workItem from="1693123495191" duration="9826000" />
+      <workItem from="1693123495191" duration="12301000" />
     </task>
     <task id="LOCAL-00001" summary="Config - Front_End">
       <option name="closed" value="true" />
@@ -226,7 +225,15 @@
       <option name="project" value="LOCAL" />
       <updated>1693127972380</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Implement - CustomerServlet">
+      <option name="closed" value="true" />
+      <created>1693136358080</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1693136358080</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -236,6 +243,7 @@
     <MESSAGE value="Config - Front_End" />
     <MESSAGE value="Config - Back_End" />
     <MESSAGE value="Implement - ItemDTO and CustomerDTO" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implement - ItemDTO and CustomerDTO" />
+    <MESSAGE value="Implement - CustomerServlet" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implement - CustomerServlet" />
   </component>
 </project>

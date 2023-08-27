@@ -37,12 +37,14 @@ public class CustomerServlet extends HttpServlet {
                 String id = rst.getString(1);
                 String name = rst.getString(2);
                 String address = rst.getString(3);
+                String salary = String.valueOf(rst.getDouble(4));
 
                 JsonObjectBuilder customerObject = Json.createObjectBuilder();
 
                 customerObject.add("id", id);
                 customerObject.add("name", name);
                 customerObject.add("address", address);
+                customerObject.add("salary",salary);
 
                 allCustomers.add(customerObject.build());
 
@@ -64,7 +66,7 @@ public class CustomerServlet extends HttpServlet {
         String cusID = req.getParameter("cusID");
         String cusName = req.getParameter("cusName");
         String cusAddress = req.getParameter("cusAddress");
-        double cusSalary = Double.parseDouble(req.getParameter("cusAddress"));
+        double cusSalary = Double.parseDouble(req.getParameter("cusSalary"));
 
         // Create a CustomerDTO object with the retrieved data
         CustomerDTO customerDTO = new CustomerDTO(cusID, cusName, cusAddress, cusSalary);
@@ -81,12 +83,13 @@ public class CustomerServlet extends HttpServlet {
             Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/posapp", "root", "1234");
 
             // Create a PreparedStatement for inserting customer data
-            PreparedStatement pstm = connection.prepareStatement("insert into custommer values (?,?,?)");
+            PreparedStatement pstm = connection.prepareStatement("insert into custommer values (?,?,?,?)");
 
             // Bind customer data to the prepared statement
-            pstm.setObject(1, cusID);
-            pstm.setObject(2, cusName);
-            pstm.setObject(3, cusAddress);
+            pstm.setObject(1, customerDTO.getId());
+            pstm.setObject(2, customerDTO.getName());
+            pstm.setObject(3, customerDTO.getAddress());
+            pstm.setObject(4, customerDTO.getSalary());
 
             // Execute the INSERT query and check if any rows were affected
             if (pstm.executeUpdate() > 0) {
@@ -122,6 +125,9 @@ public class CustomerServlet extends HttpServlet {
         String id = customerObject.getString("id");
         String name = customerObject.getString("name");
         String address = customerObject.getString("address");
+        double salary = Double.parseDouble(customerObject.getString("salary"));
+
+        CustomerDTO customerDTO = new CustomerDTO(id, name, address, salary);
 
         // Set response header for cross-origin access
         resp.addHeader("Access-Control-Allow-Origin", "*");
@@ -134,12 +140,13 @@ public class CustomerServlet extends HttpServlet {
             Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/posapp", "root", "1234");
 
             // Create a PreparedStatement for updating customer data
-            PreparedStatement pstm = connection.prepareStatement("update customer set name=?, address=? where id=?");
+            PreparedStatement pstm = connection.prepareStatement("update customer set name=?, address=?,salary=? where id=?");
 
             // Bind customer data to the prepared statement
-            pstm.setObject(3, id);
-            pstm.setObject(1, name);
-            pstm.setObject(2, address);
+            pstm.setObject(4, customerDTO.getId());
+            pstm.setObject(1, customerDTO.getName());
+            pstm.setObject(2, customerDTO.getAddress());
+            pstm.setObject(3, customerDTO.getSalary());
 
             // Execute the UPDATE query and check if any rows were affected
             if (pstm.executeUpdate() > 0) {
@@ -157,9 +164,9 @@ public class CustomerServlet extends HttpServlet {
 
             }
 
-        } catch (ClassNotFoundException | SQLException e) {
+        } catch (Exception e) {
             // If an exception occurs, wrap it in a RuntimeException and throw it
-            throw new RuntimeException(e);
+            e.printStackTrace();
         }
     }
 
@@ -197,8 +204,14 @@ public class CustomerServlet extends HttpServlet {
 
             }
 
-        } catch (ClassNotFoundException | SQLException e) {
-            throw new RuntimeException(e);
+        } catch (Exception e) {
+            e.printStackTrace();
+            JsonObjectBuilder response = Json.createObjectBuilder();
+            response.add("state", "Error");
+            response.add("message", e.getMessage());
+            response.add("Data", "");
+            resp.setStatus(400);
+            resp.getWriter().print(response.build());
         }
     }
 
