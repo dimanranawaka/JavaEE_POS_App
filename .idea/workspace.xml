@@ -1,32 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="Back_End" />
+    </artifacts-to-build>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1e752750-833b-4bf6-87c5-709fdb29838f" name="Changes" comment="Config - Front_End">
-      <change afterPath="$PROJECT_DIR$/Back_End/src/lk/ijse/pos_app/lib/javax.annotation.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Back_End/src/lk/ijse/pos_app/lib/javax.ejb.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Back_End/src/lk/ijse/pos_app/lib/javax.jms.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Back_End/src/lk/ijse/pos_app/lib/javax.persistence.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Back_End/src/lk/ijse/pos_app/lib/javax.resource.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Back_End/src/lk/ijse/pos_app/lib/javax.servlet.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Back_End/src/lk/ijse/pos_app/lib/javax.servlet.jsp.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Back_End/src/lk/ijse/pos_app/lib/javax.servlet.jsp.jstl.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Back_End/src/lk/ijse/pos_app/lib/javax.transaction.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Back_End/src/lk/ijse/pos_app/lib/json-p/javax.json-1.1.4.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Back_End/src/lk/ijse/pos_app/lib/json-p/javax.json-api-1.1.4.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Back_End/src/lk/ijse/pos_app/lib/mysql-connector-j-8.1.0.jar" afterDir="false" />
+    <list default="true" id="1e752750-833b-4bf6-87c5-709fdb29838f" name="Changes" comment="Implement - ItemDTO and CustomerDTO">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Back_End/src/lk/ijse/pos_app/servlets/CustomerServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Back_End/Back_End.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Back_End/Back_End.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front_End/pages/customer.html" beforeDir="false" afterPath="$PROJECT_DIR$/Front_End/pages/customer.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
@@ -44,6 +54,7 @@
     "Repository.Attach.Sources": "false",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "master",
     "jdk.selected.JAVA_MODULE": "1.8",
@@ -58,6 +69,11 @@
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "preferences.lookFeel",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ]
   }
 }]]></component>
   <component name="RecentsManager">
@@ -168,7 +184,7 @@
       <workItem from="1693118353067" duration="1836000" />
       <workItem from="1693122978227" duration="91000" />
       <workItem from="1693123087656" duration="388000" />
-      <workItem from="1693123495191" duration="2307000" />
+      <workItem from="1693123495191" duration="9826000" />
     </task>
     <task id="LOCAL-00001" summary="Config - Front_End">
       <option name="closed" value="true" />
@@ -186,7 +202,31 @@
       <option name="project" value="LOCAL" />
       <updated>1693125098104</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Config - Back_End">
+      <option name="closed" value="true" />
+      <created>1693126214270</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1693126214270</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Config - Back_End">
+      <option name="closed" value="true" />
+      <created>1693126241487</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1693126241487</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Implement - ItemDTO and CustomerDTO">
+      <option name="closed" value="true" />
+      <created>1693127972380</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1693127972380</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -194,6 +234,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Config - Front_End" />
-    <option name="LAST_COMMIT_MESSAGE" value="Config - Front_End" />
+    <MESSAGE value="Config - Back_End" />
+    <MESSAGE value="Implement - ItemDTO and CustomerDTO" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implement - ItemDTO and CustomerDTO" />
   </component>
 </project>
